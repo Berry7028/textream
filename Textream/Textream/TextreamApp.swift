@@ -124,41 +124,41 @@ struct TextreamApp: App {
 
         .commands {
             CommandGroup(replacing: .appInfo) {
-                Button("About Textream") {
+                Button("about_textream".localized) {
                     NotificationCenter.default.post(name: .openAbout, object: nil)
                 }
                 Divider()
-                Button("Check for Updates…") {
+                Button("check_for_updates".localized) {
                     UpdateChecker.shared.checkForUpdates()
                 }
             }
             CommandGroup(after: .appSettings) {
-                Button("Settings…") {
+                Button("settings".localized + "…") {
                     NotificationCenter.default.post(name: .openSettings, object: nil)
                 }
                 .keyboardShortcut(",", modifiers: .command)
             }
             CommandGroup(replacing: .newItem) {
-                Button("Open…") {
+                Button("open".localized) {
                     TextreamService.shared.openFile()
                 }
                 .keyboardShortcut("o", modifiers: .command)
 
                 Divider()
 
-                Button("Save") {
+                Button("save".localized) {
                     TextreamService.shared.saveFile()
                 }
                 .keyboardShortcut("s", modifiers: .command)
 
-                Button("Save As…") {
+                Button("save_as".localized) {
                     TextreamService.shared.saveFileAs()
                 }
                 .keyboardShortcut("s", modifiers: [.command, .shift])
             }
             CommandGroup(replacing: .windowArrangement) { }
             CommandGroup(replacing: .help) {
-                Button("Textream Help") {
+                Button("textream_help".localized) {
                     if let url = URL(string: "https://github.com/f/textream") {
                         NSWorkspace.shared.open(url)
                     }

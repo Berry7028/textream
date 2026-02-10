@@ -261,12 +261,12 @@ enum SettingsTab: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .general: return "Size"
-        case .listeningMode: return "Guidance"
-        case .font: return "Font"
-        case .fontColor: return "Color"
-        case .overlayMode: return "Overlay"
-        case .externalDisplay: return "Display"
+        case .general: return "size".localized
+        case .listeningMode: return "guidance".localized
+        case .font: return "font".localized
+        case .fontColor: return "color".localized
+        case .overlayMode: return "overlay".localized
+        case .externalDisplay: return "display".localized
         }
     }
 
@@ -294,7 +294,7 @@ struct SettingsView: View {
         HStack(spacing: 0) {
             // Sidebar
             VStack(alignment: .leading, spacing: 2) {
-                Text("Settings")
+                Text("settings".localized)
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundStyle(.tertiary)
                     .textCase(.uppercase)
@@ -324,7 +324,7 @@ struct SettingsView: View {
 
                 Spacer()
 
-                Button("Reset") {
+                Button("reset".localized) {
                     settings.notchWidth = NotchSettings.defaultWidth
                     settings.textAreaHeight = NotchSettings.defaultHeight
                     settings.fontSizePreset = .lg
@@ -379,7 +379,7 @@ struct SettingsView: View {
 
                 HStack {
                     Spacer()
-                    Button("Done") {
+                    Button("done".localized) {
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
@@ -438,7 +438,7 @@ struct SettingsView: View {
             // Width slider
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
-                    Text("Width")
+                    Text("width".localized)
                         .font(.system(size: 13, weight: .medium))
                     Spacer()
                     Text("\(Int(settings.notchWidth))px")
@@ -455,7 +455,7 @@ struct SettingsView: View {
             // Height slider
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
-                    Text("Height")
+                    Text("height".localized)
                         .font(.system(size: 13, weight: .medium))
                     Spacer()
                     Text("\(Int(settings.textAreaHeight))px")
@@ -492,7 +492,7 @@ struct SettingsView: View {
                 Divider()
 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Speech Language")
+                    Text("speech_language".localized)
                         .font(.system(size: 13, weight: .medium))
                     Picker("", selection: $settings.speechLocale) {
                         ForEach(SFSpeechRecognizer.supportedLocales().sorted(by: { $0.identifier < $1.identifier }), id: \.identifier) { locale in
@@ -509,10 +509,10 @@ struct SettingsView: View {
 
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
-                        Text("Scroll Speed")
+                        Text("scroll_speed".localized)
                             .font(.system(size: 13, weight: .medium))
                         Spacer()
-                        Text(String(format: "%.1f words/s", settings.scrollSpeed))
+                        Text("words_per_second".localized(settings.scrollSpeed))
                             .font(.system(size: 12, weight: .regular, design: .monospaced))
                             .foregroundStyle(.secondary)
                     }
@@ -522,11 +522,11 @@ struct SettingsView: View {
                         step: 0.5
                     )
                     HStack {
-                        Text("Slower")
+                        Text("slower".localized)
                             .font(.system(size: 10))
                             .foregroundStyle(.tertiary)
                         Spacer()
-                        Text("Faster")
+                        Text("faster".localized)
                             .font(.system(size: 10))
                             .foregroundStyle(.tertiary)
                     }
@@ -539,7 +539,7 @@ struct SettingsView: View {
 
     private var fontTab: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("Font Family")
+            Text("font_family".localized)
                 .font(.system(size: 13, weight: .medium))
 
             HStack(spacing: 8) {
@@ -574,7 +574,7 @@ struct SettingsView: View {
 
             Divider()
 
-            Text("Text Size")
+            Text("text_size".localized)
                 .font(.system(size: 13, weight: .medium))
 
             HStack(spacing: 8) {
@@ -613,7 +613,7 @@ struct SettingsView: View {
 
     private var fontColorTab: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Highlight Color")
+            Text("highlight_color".localized)
                 .font(.system(size: 13, weight: .medium))
 
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 80), spacing: 8)], spacing: 8) {
@@ -667,9 +667,9 @@ struct SettingsView: View {
         VStack(alignment: .leading, spacing: 14) {
             Toggle(isOn: $settings.hideFromScreenShare) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Do not show on screen shares")
+                    Text("do_not_show_on_screen_shares".localized)
                         .font(.system(size: 13, weight: .medium))
-                    Text("Hide the overlay from screen recordings and video calls.")
+                    Text("hide_from_screen_share_description".localized)
                         .font(.system(size: 11))
                         .foregroundStyle(.secondary)
                 }
@@ -678,14 +678,14 @@ struct SettingsView: View {
 
             Divider()
 
-            Text("External Display")
+            Text("external_display".localized)
                 .font(.system(size: 13, weight: .medium))
 
-            Text("Show the teleprompter fullscreen on an external display or Sidecar iPad.")
+            Text("external_display_description".localized)
                 .font(.system(size: 11))
                 .foregroundStyle(.secondary)
 
-            Picker("Mode", selection: $settings.externalDisplayMode) {
+            Picker("mode".localized, selection: $settings.externalDisplayMode) {
                 ForEach(ExternalDisplayMode.allCases) { mode in
                     Text(mode.label).tag(mode)
                 }
@@ -699,7 +699,7 @@ struct SettingsView: View {
             if settings.externalDisplayMode == .mirror {
                 Divider()
 
-                Text("Mirror Axis")
+                Text("mirror_axis".localized)
                     .font(.system(size: 13, weight: .medium))
 
                 Picker("", selection: $settings.mirrorAxis) {
@@ -719,7 +719,7 @@ struct SettingsView: View {
                 Divider()
 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Target Display")
+                    Text("target_display".localized)
                         .font(.system(size: 13, weight: .medium))
 
                     if availableScreens.isEmpty {
@@ -727,7 +727,7 @@ struct SettingsView: View {
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.system(size: 11))
                                 .foregroundStyle(.orange)
-                            Text("No external displays detected. Connect a display or enable Sidecar.")
+                            Text("no_external_displays".localized)
                                 .font(.system(size: 11))
                                 .foregroundStyle(.secondary)
                         }
@@ -778,7 +778,7 @@ struct SettingsView: View {
                         HStack(spacing: 4) {
                             Image(systemName: "arrow.clockwise")
                                 .font(.system(size: 10, weight: .semibold))
-                            Text("Refresh")
+                            Text("refresh".localized)
                                 .font(.system(size: 11, weight: .medium))
                         }
                         .foregroundStyle(.secondary)
@@ -819,7 +819,7 @@ struct SettingsView: View {
             if settings.overlayMode == .pinned {
                 Divider()
 
-                Text("Display")
+                Text("display".localized)
                     .font(.system(size: 13, weight: .medium))
 
                 Picker("", selection: $settings.notchDisplayMode) {
@@ -875,7 +875,7 @@ struct SettingsView: View {
                             HStack(spacing: 4) {
                                 Image(systemName: "arrow.clockwise")
                                     .font(.system(size: 10, weight: .semibold))
-                                Text("Refresh")
+                                Text("refresh".localized)
                                     .font(.system(size: 11, weight: .medium))
                             }
                             .foregroundStyle(.secondary)
@@ -889,20 +889,20 @@ struct SettingsView: View {
                 Divider()
 
                 Toggle(isOn: $settings.followCursorWhenUndocked) {
-                    Text("Follow Cursor")
+                    Text("follow_cursor".localized)
                         .font(.system(size: 13, weight: .medium))
                 }
                 .toggleStyle(.switch)
                 .controlSize(.small)
 
-                Text("The window follows your cursor and sticks to its bottom-right.")
+                Text("follow_cursor_description".localized)
                     .font(.system(size: 11))
                     .foregroundStyle(.secondary)
 
                 Divider()
 
                 Toggle(isOn: $settings.floatingGlassEffect) {
-                    Text("Glass Effect")
+                    Text("glass_effect".localized)
                         .font(.system(size: 13, weight: .medium))
                 }
                 .toggleStyle(.switch)
@@ -911,7 +911,7 @@ struct SettingsView: View {
                 if settings.floatingGlassEffect {
                     VStack(alignment: .leading, spacing: 6) {
                         HStack {
-                            Text("Glass Opacity")
+                            Text("glass_opacity".localized)
                                 .font(.system(size: 13, weight: .medium))
                             Spacer()
                             Text("\(Int(settings.glassOpacity * 100))%")
