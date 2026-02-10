@@ -1,0 +1,152 @@
+/* ContentView */
+"welcome_text" = "Welcome to Textream! This is your personal teleprompter that sits right below your MacBook's notch. [smile]\n\nAs you read aloud, the text will highlight in real-time, following your voice. The speech recognition matches your words and keeps track of your progress. [pause]\n\nYou can pause at any time, go back and re-read sections, and the highlighting will follow along. When you finish reading all the text, the overlay will automatically close with a smooth animation. [nod]\n\nTry reading this passage out loud to see how the highlighting works. The waveform at the bottom shows your voice activity, and you'll see the last few words you spoke displayed next to it.\n\nHappy presenting! [wave]";
+"page" = "Page";
+"drop_pptx_title" = "Drop PowerPoint (.pptx) file";
+"drop_pptx_subtitle" = "For Keynote or Google Slides,\nexport as PPTX first.";
+"conversion_required" = "Conversion Required";
+"keynote_export_message" = "Keynote files can't be imported directly. Please export your Keynote presentation as PowerPoint (.pptx) first, then drop the exported file here.";
+"import_error" = "Import Error";
+"unsupported_file" = "Unsupported file. Drop a PowerPoint (.pptx) file.";
+"delete_page" = "Delete Page";
+"ok" = "OK";
+
+/* About View */
+"about_textream" = "About Textream";
+"textream" = "Textream";
+"version" = "Version %@";
+"about_description" = "A free, open-source teleprompter that highlights your script in real-time as you speak.";
+"github" = "GitHub";
+"donate" = "Donate";
+"made_by" = "Made by Fatih Kadir Akin";
+"original_idea" = "Original idea by Semih Kışlar";
+
+/* Settings View */
+"settings" = "Settings";
+"size" = "Size";
+"guidance" = "Guidance";
+"font" = "Font";
+"color" = "Color";
+"overlay" = "Overlay";
+"display" = "Display";
+"reset" = "Reset";
+"done" = "Done";
+
+/* General Tab */
+"width" = "Width";
+"height" = "Height";
+
+/* Listening Mode Tab */
+"speech_language" = "Speech Language";
+"scroll_speed" = "Scroll Speed";
+"slower" = "Slower";
+"faster" = "Faster";
+"words_per_second" = "%.1f words/s";
+
+/* Font Tab */
+"font_family" = "Font Family";
+"text_size" = "Text Size";
+
+/* Font Color Tab */
+"highlight_color" = "Highlight Color";
+
+/* Overlay Mode Tab */
+"follow_cursor" = "Follow Cursor";
+"follow_cursor_description" = "The window follows your cursor and sticks to its bottom-right.";
+"glass_effect" = "Glass Effect";
+"glass_opacity" = "Glass Opacity";
+
+/* External Display Tab */
+"do_not_show_on_screen_shares" = "Do not show on screen shares";
+"hide_from_screen_share_description" = "Hide the overlay from screen recordings and video calls.";
+"external_display" = "External Display";
+"external_display_description" = "Show the teleprompter fullscreen on an external display or Sidecar iPad.";
+"mode" = "Mode";
+"mirror_axis" = "Mirror Axis";
+"target_display" = "Target Display";
+"no_external_displays" = "No external displays detected. Connect a display or enable Sidecar.";
+"refresh" = "Refresh";
+
+/* Menu Items */
+"about_textream" = "About Textream";
+"check_for_updates" = "Check for Updates…";
+"settings" = "Settings…";
+"open" = "Open…";
+"save" = "Save";
+"save_as" = "Save As…";
+"textream_help" = "Textream Help";
+
+/* NotchSettings - Font Size Presets */
+"font_size_xs" = "XS";
+"font_size_sm" = "SM";
+"font_size_lg" = "LG";
+"font_size_xl" = "XL";
+
+/* NotchSettings - Font Family Presets */
+"font_family_sans" = "Sans";
+"font_family_serif" = "Serif";
+"font_family_mono" = "Mono";
+"font_family_dyslexia" = "Dyslexia";
+
+/* NotchSettings - Font Color Presets */
+"color_white" = "White";
+"color_yellow" = "Yellow";
+"color_green" = "Green";
+"color_blue" = "Blue";
+"color_pink" = "Pink";
+"color_orange" = "Orange";
+
+/* NotchSettings - Overlay Mode */
+"overlay_pinned" = "Pinned to Notch";
+"overlay_floating" = "Floating Window";
+"overlay_pinned_description" = "Anchored below the notch at the top of your screen.";
+"overlay_floating_description" = "A draggable window you can place anywhere. Always on top.";
+
+/* NotchSettings - Notch Display Mode */
+"notch_follow_mouse" = "Follow Mouse";
+"notch_fixed_display" = "Fixed Display";
+"notch_follow_mouse_description" = "The notch moves to whichever display your mouse is on.";
+"notch_fixed_display_description" = "The notch stays on the selected display.";
+
+/* NotchSettings - External Display Mode */
+"external_display_off" = "Off";
+"external_display_teleprompter" = "Teleprompter";
+"external_display_mirror" = "Mirror";
+"external_display_off_description" = "No external display output.";
+"external_display_teleprompter_description" = "Fullscreen teleprompter on the selected display.";
+"external_display_mirror_description" = "Horizontally flipped for use with a prompter mirror rig.";
+
+/* NotchSettings - Mirror Axis */
+"mirror_horizontal" = "Horizontal";
+"mirror_vertical" = "Vertical";
+"mirror_both" = "Both";
+"mirror_horizontal_description" = "Flipped left-to-right. Standard for prompter mirror rigs.";
+"mirror_vertical_description" = "Flipped top-to-bottom.";
+"mirror_both_description" = "Flipped on both axes (rotated 180°).";
+
+/* NotchSettings - Listening Mode */
+"listening_classic" = "Classic";
+"listening_voice_activated" = "Voice-Activated";
+"listening_word_tracking" = "Word Tracking";
+"listening_classic_description" = "Auto-scrolls at a constant speed. No microphone needed.";
+"listening_voice_activated_description" = "Scrolls while you speak, pauses when you're silent.";
+"listening_word_tracking_description" = "Tracks each word you say and highlights it in real time.";
+
+/* TextreamService */
+"failed_to_save_file" = "Failed to save file";
+"unsaved_changes" = "You have unsaved changes";
+"unsaved_changes_message" = "Do you want to save your changes before opening another file?";
+"discard" = "Discard";
+"cancel" = "Cancel";
+"failed_to_open_file" = "Failed to open file";
+"no_text_found_on_pasteboard" = "No text found on pasteboard";
+
+/* UpdateChecker */
+"update_available" = "Update Available";
+"update_available_message" = "Textream %@ is available. You are currently running %@.";
+"download" = "Download";
+"later" = "Later";
+"you_are_up_to_date" = "You're Up to Date";
+"you_are_up_to_date_message" = "Textream %@ is the latest version.";
+"update_check_failed" = "Update Check Failed";
+"could_not_check_for_updates" = "Could not check for updates.\n%@";
+"could_not_parse_release_info" = "Could not parse the release information.";

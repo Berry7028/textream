@@ -18,17 +18,7 @@ struct ContentView: View {
     @State private var showAbout = false
     @FocusState private var isTextFocused: Bool
 
-    private let defaultText = """
-Welcome to Textream! This is your personal teleprompter that sits right below your MacBook's notch. [smile]
-
-As you read aloud, the text will highlight in real-time, following your voice. The speech recognition matches your words and keeps track of your progress. [pause]
-
-You can pause at any time, go back and re-read sections, and the highlighting will follow along. When you finish reading all the text, the overlay will automatically close with a smooth animation. [nod]
-
-Try reading this passage out loud to see how the highlighting works. The waveform at the bottom shows your voice activity, and you'll see the last few words you spoke displayed next to it.
-
-Happy presenting! [wave]
-"""
+    private let defaultText = "welcome_text".localized
 
     private var languageLabel: String {
         let locale = NotchSettings.shared.speechLocale
@@ -104,10 +94,10 @@ Happy presenting! [wave]
                     Image(systemName: "doc.text")
                         .font(.system(size: 28, weight: .light))
                         .foregroundStyle(Color.accentColor)
-                    Text("Drop PowerPoint (.pptx) file")
+                    Text("drop_pptx_title".localized)
                         .font(.system(size: 13, weight: .medium))
                         .foregroundStyle(.primary)
-                    Text("For Keynote or Google Slides,\nexport as PPTX first.")
+                    Text("drop_pptx_subtitle".localized)
                         .font(.system(size: 11))
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.center)
@@ -131,15 +121,15 @@ Happy presenting! [wave]
                         let ext = url.pathExtension.lowercased()
                         if ext == "key" {
                             DispatchQueue.main.async {
-                                dropAlertTitle = "Conversion Required"
-                                dropError = "Keynote files can't be imported directly. Please export your Keynote presentation as PowerPoint (.pptx) first, then drop the exported file here."
+                                dropAlertTitle = "conversion_required".localized
+                                dropError = "keynote_export_message".localized
                             }
                             return
                         }
                         guard ext == "pptx" else {
                             DispatchQueue.main.async {
-                                dropAlertTitle = "Import Error"
-                                dropError = "Unsupported file. Drop a PowerPoint (.pptx) file."
+                                dropAlertTitle = "import_error".localized
+                                dropError = "unsupported_file".localized
                             }
                             return
                         }
@@ -152,7 +142,7 @@ Happy presenting! [wave]
                 .allowsHitTesting(isDroppingPresentation)
         }
         .alert(dropAlertTitle, isPresented: Binding(get: { dropError != nil }, set: { if !$0 { dropError = nil } })) {
-            Button("OK") { dropError = nil }
+            Button("ok".localized) { dropError = nil }
         } message: {
             Text(dropError ?? "")
         }
@@ -190,7 +180,7 @@ Happy presenting! [wave]
                         HStack(spacing: 3) {
                             Image(systemName: "plus")
                                 .font(.system(size: 10, weight: .semibold))
-                            Text("Page")
+                            Text("page".localized)
                                 .font(.system(size: 11, weight: .medium))
                         }
                         .foregroundStyle(.secondary)
@@ -291,7 +281,7 @@ Happy presenting! [wave]
                                 Button(role: .destructive) {
                                     removePage(at: index)
                                 } label: {
-                                    Label("Delete Page", systemImage: "trash")
+                                    Label("delete_page".localized, systemImage: "trash")
                                 }
                             }
                         }
@@ -407,15 +397,15 @@ struct AboutView: View {
 
             // App name & version
             VStack(spacing: 4) {
-                Text("Textream")
+                Text("textream".localized)
                     .font(.system(size: 20, weight: .bold))
-                Text("Version \(appVersion)")
+                Text("version".localized(appVersion))
                     .font(.system(size: 12))
                     .foregroundStyle(.secondary)
             }
 
             // Description
-            Text("A free, open-source teleprompter that highlights your script in real-time as you speak.")
+            Text("about_description".localized)
                 .font(.system(size: 13))
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -427,7 +417,7 @@ struct AboutView: View {
                     HStack(spacing: 5) {
                         Image(systemName: "chevron.left.forwardslash.chevron.right")
                             .font(.system(size: 11, weight: .semibold))
-                        Text("GitHub")
+                        Text("github".localized)
                             .font(.system(size: 12, weight: .medium))
                     }
                     .foregroundStyle(.primary)
@@ -442,7 +432,7 @@ struct AboutView: View {
                         Image(systemName: "heart.fill")
                             .font(.system(size: 11, weight: .semibold))
                             .foregroundStyle(.pink)
-                        Text("Donate")
+                        Text("donate".localized)
                             .font(.system(size: 12, weight: .medium))
                     }
                     .foregroundStyle(.primary)
@@ -456,15 +446,15 @@ struct AboutView: View {
             Divider().padding(.horizontal, 20)
 
             VStack(spacing: 4) {
-                Text("Made by Fatih Kadir Akin")
+                Text("made_by".localized)
                     .font(.system(size: 11, weight: .medium))
                     .foregroundStyle(.secondary)
-                Text("Original idea by Semih Kışlar")
+                Text("original_idea".localized)
                     .font(.system(size: 11))
                     .foregroundStyle(.tertiary)
             }
 
-            Button("OK") {
+            Button("ok".localized) {
                 dismiss()
             }
             .buttonStyle(.borderedProminent)

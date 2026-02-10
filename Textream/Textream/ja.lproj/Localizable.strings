@@ -1,0 +1,152 @@
+/* ContentView */
+"welcome_text" = "Textreamへようこそ！これはMacBookのノッチの真下に配置されるパーソナルプロンプターです。[smile]\n\n声に出して読むと、音声認識があなたの言葉に合わせてテキストをリアルタイムでハイライトします。進捗を追跡します。[pause]\n\nいつでも一時停止したり、セクションを読み直したりでき、ハイライトもそれに追従します。すべてのテキストを読み終えると、オーバーレイは滑らかなアニメーションで自動的に閉じます。[nod]\n\nこの文章を声に出して読んで、ハイライトの動作を確認してください。下部の波形は音声アクティビティを示し、最後に話した数語が表示されます。\n\nプレゼンテーション頑張ってください！[wave]";
+"page" = "ページ";
+"drop_pptx_title" = "PowerPoint（.pptx）ファイルをドロップ";
+"drop_pptx_subtitle" = "KeynoteまたはGoogleスライドの場合は、\nまずPPTXとしてエクスポートしてください。";
+"conversion_required" = "変換が必要です";
+"keynote_export_message" = "Keynoteファイルを直接インポートすることはできません。まずKeynoteプレゼンテーションをPowerPoint（.pptx）としてエクスポートしてから、エクスポートしたファイルをここにドロップしてください。";
+"import_error" = "インポートエラー";
+"unsupported_file" = "サポートされていないファイルです。PowerPoint（.pptx）ファイルをドロップしてください。";
+"delete_page" = "ページを削除";
+"ok" = "OK";
+
+/* About View */
+"about_textream" = "Textreamについて";
+"textream" = "Textream";
+"version" = "バージョン %@";
+"about_description" = "話した内容をリアルタイムでハイライトする無料のオープンソースプロンプターです。";
+"github" = "GitHub";
+"donate" = "寄付";
+"made_by" = "作成者：Fatih Kadir Akin";
+"original_idea" = "オリジナルアイデア：Semih Kışlar";
+
+/* Settings View */
+"settings" = "設定";
+"size" = "サイズ";
+"guidance" = "ガイダンス";
+"font" = "フォント";
+"color" = "カラー";
+"overlay" = "オーバーレイ";
+"display" = "ディスプレイ";
+"reset" = "リセット";
+"done" = "完了";
+
+/* General Tab */
+"width" = "幅";
+"height" = "高さ";
+
+/* Listening Mode Tab */
+"speech_language" = "音声言語";
+"scroll_speed" = "スクロール速度";
+"slower" = "遅く";
+"faster" = "速く";
+"words_per_second" = "%.1f 単語/秒";
+
+/* Font Tab */
+"font_family" = "フォントファミリー";
+"text_size" = "テキストサイズ";
+
+/* Font Color Tab */
+"highlight_color" = "ハイライトカラー";
+
+/* Overlay Mode Tab */
+"follow_cursor" = "カーソルを追従";
+"follow_cursor_description" = "ウィンドウがカーソルを追従し、右下に固定されます。";
+"glass_effect" = "ガラスエフェクト";
+"glass_opacity" = "ガラスの不透明度";
+
+/* External Display Tab */
+"do_not_show_on_screen_shares" = "画面共有で表示しない";
+"hide_from_screen_share_description" = "画面録画やビデオ通話でオーバーレイを非表示にします。";
+"external_display" = "外部ディスプレイ";
+"external_display_description" = "外部ディスプレイまたはSidecar iPadにフルスクリーンプロンプターを表示します。";
+"mode" = "モード";
+"mirror_axis" = "ミラー軸";
+"target_display" = "対象ディスプレイ";
+"no_external_displays" = "外部ディスプレイが検出されませんでした。ディスプレイを接続するか、Sidecarを有効にしてください。";
+"refresh" = "更新";
+
+/* Menu Items */
+"about_textream" = "Textreamについて";
+"check_for_updates" = "アップデートを確認…";
+"settings" = "設定…";
+"open" = "開く…";
+"save" = "保存";
+"save_as" = "別名で保存…";
+"textream_help" = "Textreamヘルプ";
+
+/* NotchSettings - Font Size Presets */
+"font_size_xs" = "XS";
+"font_size_sm" = "SM";
+"font_size_lg" = "LG";
+"font_size_xl" = "XL";
+
+/* NotchSettings - Font Family Presets */
+"font_family_sans" = "サンセリフ";
+"font_family_serif" = "セリフ";
+"font_family_mono" = "等幅";
+"font_family_dyslexia" = "ディスレクシア";
+
+/* NotchSettings - Font Color Presets */
+"color_white" = "白";
+"color_yellow" = "黄色";
+"color_green" = "緑";
+"color_blue" = "青";
+"color_pink" = "ピンク";
+"color_orange" = "オレンジ";
+
+/* NotchSettings - Overlay Mode */
+"overlay_pinned" = "ノッチに固定";
+"overlay_floating" = "フローティングウィンドウ";
+"overlay_pinned_description" = "画面上部のノッチの下に固定されます。";
+"overlay_floating_description" = "どこにでも配置できるドラッグ可能なウィンドウ。常に最前面に表示されます。";
+
+/* NotchSettings - Notch Display Mode */
+"notch_follow_mouse" = "マウスを追従";
+"notch_fixed_display" = "固定ディスプレイ";
+"notch_follow_mouse_description" = "ノッチがマウスのあるディスプレイに移動します。";
+"notch_fixed_display_description" = "ノッチが選択したディスプレイに固定されます。";
+
+/* NotchSettings - External Display Mode */
+"external_display_off" = "オフ";
+"external_display_teleprompter" = "プロンプター";
+"external_display_mirror" = "ミラー";
+"external_display_off_description" = "外部ディスプレイ出力なし。";
+"external_display_teleprompter_description" = "選択したディスプレイにフルスクリーンプロンプター。";
+"external_display_mirror_description" = "プロンプターミラーリグ用に水平反転。";
+
+/* NotchSettings - Mirror Axis */
+"mirror_horizontal" = "水平";
+"mirror_vertical" = "垂直";
+"mirror_both" = "両方";
+"mirror_horizontal_description" = "左右反転。プロンプターミラーリグの標準。";
+"mirror_vertical_description" = "上下反転。";
+"mirror_both_description" = "両軸で反転（180度回転）。";
+
+/* NotchSettings - Listening Mode */
+"listening_classic" = "クラシック";
+"listening_voice_activated" = "音声起動";
+"listening_word_tracking" = "単語トラッキング";
+"listening_classic_description" = "一定速度で自動スクロール。マイク不要。";
+"listening_voice_activated_description" = "話している間スクロールし、無音時は一時停止します。";
+"listening_word_tracking_description" = "話す単語ごとにリアルタイムでトラッキングしてハイライトします。";
+
+/* TextreamService */
+"failed_to_save_file" = "ファイルの保存に失敗しました";
+"unsaved_changes" = "未保存の変更があります";
+"unsaved_changes_message" = "別のファイルを開く前に変更を保存しますか？";
+"discard" = "破棄";
+"cancel" = "キャンセル";
+"failed_to_open_file" = "ファイルを開けませんでした";
+"no_text_found_on_pasteboard" = "ペーストボードにテキストが見つかりませんでした";
+
+/* UpdateChecker */
+"update_available" = "アップデートが利用可能です";
+"update_available_message" = "Textream %@ が利用可能です。現在のバージョンは %@ です。";
+"download" = "ダウンロード";
+"later" = "後で";
+"you_are_up_to_date" = "最新バージョンです";
+"you_are_up_to_date_message" = "Textream %@ は最新バージョンです。";
+"update_check_failed" = "アップデートの確認に失敗しました";
+"could_not_check_for_updates" = "アップデートを確認できませんでした。\n%@";
+"could_not_parse_release_info" = "リリース情報を解析できませんでした。";

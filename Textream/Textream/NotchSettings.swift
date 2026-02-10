@@ -16,10 +16,10 @@ enum FontSizePreset: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .xs: return "XS"
-        case .sm: return "SM"
-        case .lg: return "LG"
-        case .xl: return "XL"
+        case .xs: return "font_size_xs".localized
+        case .sm: return "font_size_sm".localized
+        case .lg: return "font_size_lg".localized
+        case .xl: return "font_size_xl".localized
         }
     }
 
@@ -42,10 +42,10 @@ enum FontFamilyPreset: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .sans:     return "Sans"
-        case .serif:    return "Serif"
-        case .mono:     return "Mono"
-        case .dyslexia: return "Dyslexia"
+        case .sans:     return "font_family_sans".localized
+        case .serif:    return "font_family_serif".localized
+        case .mono:     return "font_family_mono".localized
+        case .dyslexia: return "font_family_dyslexia".localized
         }
     }
 
@@ -107,12 +107,12 @@ enum FontColorPreset: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .white:  return "White"
-        case .yellow: return "Yellow"
-        case .green:  return "Green"
-        case .blue:   return "Blue"
-        case .pink:   return "Pink"
-        case .orange: return "Orange"
+        case .white:  return "color_white".localized
+        case .yellow: return "color_yellow".localized
+        case .green:  return "color_green".localized
+        case .blue:   return "color_blue".localized
+        case .pink:   return "color_pink".localized
+        case .orange: return "color_orange".localized
         }
     }
 }
@@ -126,15 +126,15 @@ enum OverlayMode: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .pinned:   return "Pinned to Notch"
-        case .floating: return "Floating Window"
+        case .pinned:   return "overlay_pinned".localized
+        case .floating: return "overlay_floating".localized
         }
     }
 
     var description: String {
         switch self {
-        case .pinned:   return "Anchored below the notch at the top of your screen."
-        case .floating: return "A draggable window you can place anywhere. Always on top."
+        case .pinned:   return "overlay_pinned_description".localized
+        case .floating: return "overlay_floating_description".localized
         }
     }
 
@@ -155,15 +155,15 @@ enum NotchDisplayMode: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .followMouse:  return "Follow Mouse"
-        case .fixedDisplay: return "Fixed Display"
+        case .followMouse:  return "notch_follow_mouse".localized
+        case .fixedDisplay: return "notch_fixed_display".localized
         }
     }
 
     var description: String {
         switch self {
-        case .followMouse:  return "The notch moves to whichever display your mouse is on."
-        case .fixedDisplay: return "The notch stays on the selected display."
+        case .followMouse:  return "notch_follow_mouse_description".localized
+        case .fixedDisplay: return "notch_fixed_display_description".localized
         }
     }
 }
@@ -177,17 +177,17 @@ enum ExternalDisplayMode: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .off:          return "Off"
-        case .teleprompter: return "Teleprompter"
-        case .mirror:       return "Mirror"
+        case .off:          return "external_display_off".localized
+        case .teleprompter: return "external_display_teleprompter".localized
+        case .mirror:       return "external_display_mirror".localized
         }
     }
 
     var description: String {
         switch self {
-        case .off:          return "No external display output."
-        case .teleprompter: return "Fullscreen teleprompter on the selected display."
-        case .mirror:       return "Horizontally flipped for use with a prompter mirror rig."
+        case .off:          return "external_display_off_description".localized
+        case .teleprompter: return "external_display_teleprompter_description".localized
+        case .mirror:       return "external_display_mirror_description".localized
         }
     }
 }
@@ -201,17 +201,17 @@ enum MirrorAxis: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .horizontal: return "Horizontal"
-        case .vertical:   return "Vertical"
-        case .both:       return "Both"
+        case .horizontal: return "mirror_horizontal".localized
+        case .vertical:   return "mirror_vertical".localized
+        case .both:       return "mirror_both".localized
         }
     }
 
     var description: String {
         switch self {
-        case .horizontal: return "Flipped left-to-right. Standard for prompter mirror rigs."
-        case .vertical:   return "Flipped top-to-bottom."
-        case .both:       return "Flipped on both axes (rotated 180°)."
+        case .horizontal: return "mirror_horizontal_description".localized
+        case .vertical:   return "mirror_vertical_description".localized
+        case .both:       return "mirror_both_description".localized
         }
     }
 
@@ -239,17 +239,17 @@ enum ListeningMode: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .classic:        return "Classic"
-        case .silencePaused:  return "Voice-Activated"
-        case .wordTracking:   return "Word Tracking"
+        case .classic:        return "listening_classic".localized
+        case .silencePaused:  return "listening_voice_activated".localized
+        case .wordTracking:   return "listening_word_tracking".localized
         }
     }
 
     var description: String {
         switch self {
-        case .classic:        return "Auto-scrolls at a constant speed. No microphone needed."
-        case .silencePaused:  return "Scrolls while you speak, pauses when you're silent."
-        case .wordTracking:   return "Tracks each word you say and highlights it in real time."
+        case .classic:        return "listening_classic_description".localized
+        case .silencePaused:  return "listening_voice_activated_description".localized
+        case .wordTracking:   return "listening_word_tracking_description".localized
         }
     }
 
