@@ -144,7 +144,7 @@ class TextreamService: NSObject, ObservableObject {
             NSDocumentController.shared.noteNewRecentDocumentURL(url)
         } catch {
             let alert = NSAlert()
-            alert.messageText = "Failed to save file"
+            alert.messageText = "failed_to_save_file".localized
             alert.informativeText = error.localizedDescription
             alert.runModal()
         }
@@ -197,7 +197,7 @@ class TextreamService: NSObject, ObservableObject {
             } catch {
                 DispatchQueue.main.async {
                     let alert = NSAlert()
-                    alert.messageText = "Import Error"
+                    alert.messageText = "import_error".localized
                     alert.informativeText = error.localizedDescription
                     alert.runModal()
                 }
@@ -211,11 +211,11 @@ class TextreamService: NSObject, ObservableObject {
         guard hasUnsavedChanges else { return true }
 
         let alert = NSAlert()
-        alert.messageText = "You have unsaved changes"
-        alert.informativeText = "Do you want to save your changes before opening another file?"
-        alert.addButton(withTitle: "Save")
-        alert.addButton(withTitle: "Discard")
-        alert.addButton(withTitle: "Cancel")
+        alert.messageText = "unsaved_changes".localized
+        alert.informativeText = "unsaved_changes_message".localized
+        alert.addButton(withTitle: "save".localized)
+        alert.addButton(withTitle: "discard".localized)
+        alert.addButton(withTitle: "cancel".localized)
         alert.alertStyle = .warning
 
         let response = alert.runModal()
@@ -243,7 +243,7 @@ class TextreamService: NSObject, ObservableObject {
             NSDocumentController.shared.noteNewRecentDocumentURL(url)
         } catch {
             let alert = NSAlert()
-            alert.messageText = "Failed to open file"
+            alert.messageText = "failed_to_open_file".localized
             alert.informativeText = error.localizedDescription
             alert.runModal()
         }
@@ -252,7 +252,7 @@ class TextreamService: NSObject, ObservableObject {
     // macOS Services handler
     @objc func readInTextream(_ pboard: NSPasteboard, userData: String, error: AutoreleasingUnsafeMutablePointer<NSString?>) {
         guard let text = pboard.string(forType: .string) else {
-            error.pointee = "No text found on pasteboard" as NSString
+            error.pointee = "no_text_found_on_pasteboard".localized as NSString
             return
         }
         readText(text)

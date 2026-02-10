@@ -32,7 +32,7 @@ class UpdateChecker {
             DispatchQueue.main.async {
                 if let error {
                     if !silent {
-                        self.showError("Could not check for updates.\n\(error.localizedDescription)")
+                        self.showError("could_not_check_for_updates".localized(error.localizedDescription))
                     }
                     return
                 }
@@ -42,7 +42,7 @@ class UpdateChecker {
                       let tagName = json["tag_name"] as? String,
                       let htmlURL = json["html_url"] as? String else {
                     if !silent {
-                        self.showError("Could not parse the release information.")
+                        self.showError("could_not_parse_release_info".localized)
                     }
                     return
                 }
@@ -77,11 +77,11 @@ class UpdateChecker {
 
     private func showUpdateAvailable(latestVersion: String, releaseURL: String) {
         let alert = NSAlert()
-        alert.messageText = "Update Available"
-        alert.informativeText = "Textream \(latestVersion) is available. You are currently running \(currentVersion)."
+        alert.messageText = "update_available".localized
+        alert.informativeText = "update_available_message".localized(latestVersion, currentVersion)
         alert.alertStyle = .informational
-        alert.addButton(withTitle: "Download")
-        alert.addButton(withTitle: "Later")
+        alert.addButton(withTitle: "download".localized)
+        alert.addButton(withTitle: "later".localized)
 
         if alert.runModal() == .alertFirstButtonReturn {
             if let url = URL(string: releaseURL) {
@@ -92,19 +92,19 @@ class UpdateChecker {
 
     private func showUpToDate() {
         let alert = NSAlert()
-        alert.messageText = "You're Up to Date"
-        alert.informativeText = "Textream \(currentVersion) is the latest version."
+        alert.messageText = "you_are_up_to_date".localized
+        alert.informativeText = "you_are_up_to_date_message".localized(currentVersion)
         alert.alertStyle = .informational
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "ok".localized)
         alert.runModal()
     }
 
     private func showError(_ message: String) {
         let alert = NSAlert()
-        alert.messageText = "Update Check Failed"
+        alert.messageText = "update_check_failed".localized
         alert.informativeText = message
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "ok".localized)
         alert.runModal()
     }
 }

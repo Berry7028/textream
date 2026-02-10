@@ -128,3 +128,23 @@
 "listening_classic_description" = "Auto-scrolls at a constant speed. No microphone needed.";
 "listening_voice_activated_description" = "Scrolls while you speak, pauses when you're silent.";
 "listening_word_tracking_description" = "Tracks each word you say and highlights it in real time.";
+
+/* TextreamService */
+"failed_to_save_file" = "Failed to save file";
+"unsaved_changes" = "You have unsaved changes";
+"unsaved_changes_message" = "Do you want to save your changes before opening another file?";
+"discard" = "Discard";
+"cancel" = "Cancel";
+"failed_to_open_file" = "Failed to open file";
+"no_text_found_on_pasteboard" = "No text found on pasteboard";
+
+/* UpdateChecker */
+"update_available" = "Update Available";
+"update_available_message" = "Textream %@ is available. You are currently running %@.";
+"download" = "Download";
+"later" = "Later";
+"you_are_up_to_date" = "You're Up to Date";
+"you_are_up_to_date_message" = "Textream %@ is the latest version.";
+"update_check_failed" = "Update Check Failed";
+"could_not_check_for_updates" = "Could not check for updates.\n%@";
+"could_not_parse_release_info" = "Could not parse the release information.";

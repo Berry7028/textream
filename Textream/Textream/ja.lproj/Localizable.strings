@@ -128,3 +128,23 @@
 "listening_classic_description" = "一定速度で自動スクロール。マイク不要。";
 "listening_voice_activated_description" = "話している間スクロールし、無音時は一時停止します。";
 "listening_word_tracking_description" = "話す単語ごとにリアルタイムでトラッキングしてハイライトします。";
+
+/* TextreamService */
+"failed_to_save_file" = "ファイルの保存に失敗しました";
+"unsaved_changes" = "未保存の変更があります";
+"unsaved_changes_message" = "別のファイルを開く前に変更を保存しますか？";
+"discard" = "破棄";
+"cancel" = "キャンセル";
+"failed_to_open_file" = "ファイルを開けませんでした";
+"no_text_found_on_pasteboard" = "ペーストボードにテキストが見つかりませんでした";
+
+/* UpdateChecker */
+"update_available" = "アップデートが利用可能です";
+"update_available_message" = "Textream %@ が利用可能です。現在のバージョンは %@ です。";
+"download" = "ダウンロード";
+"later" = "後で";
+"you_are_up_to_date" = "最新バージョンです";
+"you_are_up_to_date_message" = "Textream %@ は最新バージョンです。";
+"update_check_failed" = "アップデートの確認に失敗しました";
+"could_not_check_for_updates" = "アップデートを確認できませんでした。\n%@";
+"could_not_parse_release_info" = "リリース情報を解析できませんでした。";
