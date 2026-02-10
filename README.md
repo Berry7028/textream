@@ -84,6 +84,7 @@ Then right-click the app → **Open**. After the first launch, macOS remembers y
 
 ### Other
 
+- **Localization** — Full support for Japanese (日本語) and English. The app automatically switches based on your system language.
 - **Live waveform** — Visual voice activity indicator so you always know the mic is picking you up.
 - **Tap to jump** — Tap any word in the overlay to jump the tracker to that position.
 - **Pause & resume** — Go off-script, take a break, come back. The tracker picks up where you left off.
