@@ -133,7 +133,7 @@ struct TextreamApp: App {
                 }
             }
             CommandGroup(after: .appSettings) {
-                Button("settings".localized + "…") {
+                Button("settings".localized) {
                     NotificationCenter.default.post(name: .openSettings, object: nil)
                 }
                 .keyboardShortcut(",", modifiers: .command)

@@ -67,7 +67,9 @@
 "refresh" = "更新";
 
 /* Menu Items */
+"about_textream" = "Textreamについて";
 "check_for_updates" = "アップデートを確認…";
+"settings" = "設定…";
 "open" = "開く…";
 "save" = "保存";
 "save_as" = "別名で保存…";

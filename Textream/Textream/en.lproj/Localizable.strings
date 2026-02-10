@@ -67,7 +67,9 @@
 "refresh" = "Refresh";
 
 /* Menu Items */
+"about_textream" = "About Textream";
 "check_for_updates" = "Check for Updates…";
+"settings" = "Settings…";
 "open" = "Open…";
 "save" = "Save";
 "save_as" = "Save As…";
